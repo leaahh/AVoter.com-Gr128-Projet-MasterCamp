@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Me - AVoter.com</title>
+    <link rel=icon type="image/png" href="client/images/LogoAVoter - miniature.PNG"/>
+</head>
+<body>
+    <h1>READ ME</h1>
+    <h2>[Groupe 128] Projet MasterCamp - A Voter</h2>
+
+    <h3>Membres de l'équipe</h3>
+    <ul id="membres">
+        <li>Louisa Arayedh</li>
+        <li>Léah Etzol</li>
+        <li>Quentin Lambert</li>
+        <li>Wassim Mahroug</li>
+        <li>Léo Nahmias</li>
+        <li>Anouar Smaoui</li>
+    </ul>
+
+    <a href="https://github.com/leaahh/AVoter.com-Gr128-Projet-MasterCamp" target="_blank">Lien GitHub du projet</a>
+
+    <h3>Installation et lancement du projet</h3>
+
+    <p>Télécharger MySQL Workbench, aller sur <a href="https://dev.mysql.com/downloads/workbench/" target="_blank">dev.mysql.com</a></p>
+    <p>Installer le logiciel MySQL Workbench sur votre ordinateur avec les configurations par défauts</p>
+
+    <p>Créer un identifiant et un mot de passe. <b>Notez ces identifiants, vous en aurez besoin pour la suite !</b></p>
+    <p>Ouvrir le fichier <i>avoter.sql</i> (position : dossier du projet) dans MySQL Workbench et lancer le chargement du fichier (éclair jaune)</p>
+    
+    <img src="xReadMe_img/mysqlWorkbench.png" alt="Démonstration MySQL Workbench" title="Démonstration MySQL Workbench">
+
+    <p>Insérer l'identifiant et le mot de passe de MySQL Workbench dans le fichier mysql.js (dans le dossier "mysql-test") au ligne 4 et 5 sous la forme : </p>
+    <div id="ident_mysql">
+        user: 'votre_identifiant',<br>
+        password: 'votre_mot_de_passe'
+    </div>
+    
+
+    <img src="xReadMe_img/demo_mysqlJS.png" alt="Démonstration mysql-test/mysql.js" title="Démonstration mysql-test/mysql.js">
+
+    <p>Si cela n'est pas déjà fait, installer <a href="https://nodejs.org/" target="_blank">Node.js</a></p>
+    <p>Ouvrir le terminal de votre appareil et accéder au dossier du projet : <i>cd /chemin_vers_le_projet</i></p>
+    <p>Entrer la commande suivante : <i>npm install</i></p>
+    <p id="error">En cas d'erreur, vérifier votre chemin d'accès et entrer la commande suivante : <i>npm install mysql express bcrypt body-parser</i></p>
+    <p>Un dossier node_modules avec les dépendances du projet devrait être installé.</p>
+    <p>Entrer ensuite la commande : <i>npm start</i> (un statut "Connecté" s'affichera dans votre terminal pour indiquer que vous êtes bien connecté.e à la base de données)</p>
+    <p>Vous pouvez maintenant accéder au site à l'adresse suivante : <a href="http://localhost:3000/">http://localhost:3000/</a></p>
+    
+    <h4 id="lienSite"><a href="http://localhost:3000/" target="_blank" title="Vous pouvez accéder au site à l'adresse suivante : localhost:3000">Tester le site :)</a></h4>
+
+    <h3>Nota Bene</h3>
+
+    <p>Si vous voulez effectuer des tests sur les dates, il faudra modifier les infos de la table "tour" car c'est un administrateur 
+        qui gère l'ajout, la suppression et la modification des informations.
+    </p>
+
+    <p>Nous n'avons pas affiché les résultats des élections car ils seront théoriquement communiqué sur les sites d'actualités.</p>
+
+</body>
+
+<style>
+    body{ 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 80%;
+        margin: auto;
+    }
+    #ident_mysql{ margin: 20px; }
+    #error{ color:brown; }
+    #lienSite{
+        font-size: x-large;
+        text-decoration: none;
+        text-align: center;
+        margin: auto;
+        width: 70%;
+    }
+    #lienSite:hover{
+        background-color: yellow;
+        color: black;
+    }
+    h1,h2{
+        padding-top: 10px;
+        color: brown;
+        margin: auto;
+        text-align: center;
+    }
+</style>
+</html>
